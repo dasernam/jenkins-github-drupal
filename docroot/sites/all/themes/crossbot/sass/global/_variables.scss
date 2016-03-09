@@ -1,0 +1,78 @@
+$total-columns  : 12;
+$column-width   : 5.2em;
+$gutter-width   : 1.5em;
+$grid-padding   : 2 * $gutter-width;
+
+
+// Breakpoints
+
+$small: 600px;
+$medium: 900px;
+$large: 1100px;
+
+//Colors
+
+$orange: #ef642a;
+$dark-orange: #b54617;
+$blue: #07aef1;
+$dark-blue: #166ce1;
+$green: #85c43f;
+$dark-green: #76b035;
+$white: #ffffff;
+$dirty-white: #cdcccc;
+$black: #191919;
+$dark-grey: #3f3f3f;
+$medium-grey: #6a6969;
+$light-grey: #9d9c9c;
+$lightest-grey: #f2f2f2;
+$less-dirty-white: #dddcdc;
+
+//EFFECTS (text shadows, box shadows, etc.)
+$textshadow: 0px 0px 6px rgba(0,0,0, .5) ;
+
+//OLD
+$link-blue: #13A7C7;
+$link-dark-blue: #10869f;
+
+$hero-grey: #8c8c8c;
+$main-nav-grey: #bababa;
+$med-grey:#484848;
+
+
+//Font Stacks
+$clearsans: "ClearSans", helvetica, georgia, sans-serif;
+$clearsansbold: "ClearSansBold", helvetica, georgia, sans-serif;
+$helvetica: helvetica, georgia, sans-serif;
+$serif: 'PT Serif', serif;
+
+//Typography
+$copy-font-family: $serif;
+$copy-font-size: 16px;
+$copy-line-height: 1.8;
+
+$header-font-family: $clearsansbold;
+$header-font-weight: normal;
+$header-font-style: normal;
+$header-font-color: #222;
+$header-line-height: 1.3;
+$header-letter-spacing: -1px;
+
+$header-top-margin: .2em;
+$header-bottom-margin: .5em;
+$header-text-rendering: optimizeLegibility;
+
+// We use these to control header font sizes
+ $h1-font-size: pem(44px);
+ $h2-font-size: pem(37px);
+ $h3-font-size: pem(27px);
+ $h4-font-size: pem(23px);
+ $h5-font-size: pem(18px);
+ $h6-font-size: 1em;
+
+
+
+// Misc sizes
+$top-offset: pem(58px); // offset for menu
+$block-offset: 4em; // offset between blocks
+$top-plus-block-offset: $top-offset + $block-offset;
+

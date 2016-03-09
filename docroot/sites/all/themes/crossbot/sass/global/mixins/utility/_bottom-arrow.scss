@@ -1,0 +1,22 @@
+@mixin bottom-arrow($width, $color) {
+  & {
+    position: relative;
+  }
+  &:after, &:before {
+    position: absolute;
+    width: $width;
+    height: $width;
+    background: $color;
+    bottom: $width/-2;
+    left: 50%;
+    content: "";
+    @include transform(translate($width/-2) rotate(45deg));
+    box-sizing: border-box;
+  }
+
+  // Under
+  &:after {
+    z-index: 0;
+    @include box-shadow(3px 3px 4px -1px rgba(0,0,0,.1));
+  }
+}

@@ -1,0 +1,28 @@
+.view-blog-listing-page{
+  #block-boxes-blog-listing-title {
+    @extend %page-title;
+  }
+  .blog-entry{
+   @extend %bottom-border-tall;
+    h2 {
+      margin: 0 0 .3em 0;
+    }
+    .avatar-image img{
+      width: 100%;
+      @extend %avatar-image;
+      @include respond-to($small) {
+        margin-top: 12px; // make it match up with h2 next to it
+        margin-bottom: 1em;
+      }
+    }
+    .date {
+      @extend %meta-copy;
+    }
+    .written-by {
+      @extend %meta-copy;
+    }
+  }
+  .boxes-box-controls {
+    display: none;
+  }
+}

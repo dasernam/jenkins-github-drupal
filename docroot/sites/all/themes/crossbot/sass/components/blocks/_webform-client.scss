@@ -1,0 +1,28 @@
+#block-webform-client-block-9 {
+  @extend %sidebar-box;
+  .form-item {
+    margin: 0;
+  }
+  label {
+    display: block;
+    font-family: $clearsans;
+    font-size: pem(16);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: .4em;
+  }
+  .form-text {
+    padding: .4em;
+    width: 100%;
+    display: block;
+    margin-bottom: 1.5em;
+    border: 1px solid lighten($light-grey, 25%);
+    @include box-shadow(inset 0 0 6px rgba(0,0,0,.1));
+  }
+  .form-submit {
+    @include button($orange);
+    padding: .2em 2em;
+    display: block;
+    margin: 0 auto;
+  }
+}

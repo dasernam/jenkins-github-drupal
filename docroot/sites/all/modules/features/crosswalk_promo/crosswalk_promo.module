@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Crosswalk Promo feature.
+ */
+
+include_once 'crosswalk_promo.features.inc';

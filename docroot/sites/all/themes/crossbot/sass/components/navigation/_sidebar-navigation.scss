@@ -1,0 +1,28 @@
+.jump-links{
+	h2{
+		display: none;
+	}
+	ul{
+		@extend %sidebar-box;
+		padding: 0;
+		li{
+			list-style: none;
+			border-bottom: solid 1px $less-dirty-white;
+			line-height: 1.2em;
+			&:last-child{
+				border-bottom: 0;
+			}
+			a{
+				padding: 1em $gutter-width;
+				color: $medium-grey;
+				font-family: $clearsans;
+				display: block;
+				&:hover{
+					color: white;
+					background: $blue;
+				}
+			}
+		}
+	}
+}
+

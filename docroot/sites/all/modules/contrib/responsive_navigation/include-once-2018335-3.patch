@@ -1,0 +1,35 @@
+diff --git a/responsive_navigation.drush.inc b/responsive_navigation.drush.inc
+index b3ae96e..a1efc33 100644
+--- a/responsive_navigation.drush.inc
++++ b/responsive_navigation.drush.inc
+@@ -5,7 +5,7 @@
+  * Drush integration for responsive-nav.js.
+  */
+ 
+-module_load_include('inc', 'responsive_navigation', 'responsive_navigation_common');
++include_once 'responsive_navigation_common.inc';
+ 
+ /**
+  * Implements hook_drush_command().
+@@ -118,7 +118,7 @@ function drush_rmrnjs_plugin() {
+ 
+   if (is_dir('responsive_navigation')) {
+     drush_log(dt('The responsive_navigation directory was found at @path. Attempting to delete it.', array('@path' => $path)), 'notice');
+-    
++
+     if (drush_delete_dir('responsive_navigation', TRUE)) {
+       drush_log(dt('The responsive_navigation directory has been deleted in @path', array('@path' => $path)), 'success');
+     }
+diff --git a/responsive_navigation_admin.inc b/responsive_navigation_admin.inc
+index 0b04359..f64ab81 100644
+--- a/responsive_navigation_admin.inc
++++ b/responsive_navigation_admin.inc
+@@ -6,7 +6,7 @@
+  * Implements the configuration screen.
+  */
+ 
+-module_load_include('inc', 'responsive_navigation', 'responsive_navigation_common');
++include_once 'responsive_navigation_common.inc';
+ 
+ /**
+  * Settings form as implemented by hook_menu.

@@ -1,0 +1,18 @@
+.block-responsive-navigation {
+  &                 {top: 0;}
+  .toolbar &        {top: 30px;}
+  .toolbar-drawer & {top: 64px;}
+  left: 0;
+  right: 0;
+  position: absolute;
+  @include respond-to($medium){
+    position: fixed;
+  } 
+  z-index: 999;
+  #nav{
+    @include respond-to($medium){
+      @include container;
+    }
+  }
+}
+

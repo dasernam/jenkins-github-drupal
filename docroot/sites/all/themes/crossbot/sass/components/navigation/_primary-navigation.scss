@@ -1,0 +1,136 @@
+.block-responsive-navigation {
+  @include box-shadow(0 4px 20px rgba(0,0,0,.2));
+  font-family: $clearsans;
+  background: white;
+  border-bottom: solid 4px $orange;
+  @include respond-to($medium){
+    background: rgba(255,255,255,.86);
+  }
+  #nav {
+    position: relative;
+    .js & {
+      max-height: 0;
+      display: block;
+      overflow: hidden;
+      zoom: 1;
+    }
+    .js &.closed {
+      max-height: 50px;
+      @include respond-to($medium) {
+        max-height: none;
+      }
+    }
+    &.opened {
+      max-height: 999em;
+    }
+  }
+  ul {
+    padding: 0 3em 1em 0; // padding the bottom of the mobile nav
+    margin: 0;
+    list-style: none;
+    float: left;
+    width: 100%; // allows float right of button
+    @include respond-to($medium) {
+      padding: 0;
+    }
+  }
+  li {
+    float: left;
+    width: 100%;
+    padding:.2em;
+    border-bottom: solid 1px $dirty-white;
+    &:first-child{
+      border-bottom: none;
+      padding-top: 0;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+    @include respond-to($medium) {
+      width: auto;
+      padding: .875em 0;
+      border-bottom: none;
+      &:first-child{
+        padding-top: 1em;
+      }
+    }
+    &.first a{ // Crosswalk Logo
+      @include image-replacement("crosswalk-logo.png", 100%, 180px);
+      background-position: 50% 75%;
+      border-radius: 0;
+      background-size: contain;
+      &:hover{
+        background-color: transparent;
+      }
+      @include respond-to($medium){
+        margin-right: 1em;
+        background-position: 50% 40%; // Adjust vertical position to line up logo w/ text
+      }
+    }
+    &.last {
+      float: right; // Float button to the right on desktop
+      a{
+        @include button($orange, 14px);
+        padding: .25em 1em;
+        width: auto; // remove the 100% width so constrain button size
+        margin-top: 1em; // push button away from links on mobile
+        @include respond-to($medium){
+          margin-top: 0;
+        }
+      }
+    }
+    a {
+      font-size: pem(16);
+      color: $dark-grey;
+      letter-spacing: -1px;
+      text-decoration: none;
+      width: 100%;
+      line-height:45px;
+      font-weight: bold;
+      float: left;
+      &.active{
+          color: $orange;
+        }
+      @include respond-to($medium) {
+        border-bottom: none;
+        text-align: center;
+        line-height: 1.8em;
+        padding: 0 1em;
+        border-radius: 20px;
+        &:hover{
+          color: white;
+          background-color: $orange;
+        }
+        &.active:hover{
+            color: white;
+          }
+      }
+    }
+    ul ul a{
+      background: $light-grey;
+      padding-left: 2em;
+      @include respond-to($medium) {
+        display: none;
+      }
+    }
+  }
+}
+
+#nav-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 70px;
+  height: 55px;
+  float: left;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: $orange url("../images/hamburger.gif") no-repeat 50% 45%;
+  @include respond-to($medium) {
+    display: none;
+  }
+}
+
+

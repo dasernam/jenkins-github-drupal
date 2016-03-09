@@ -1,0 +1,16 @@
+<div class="content-post">
+  <h2>Why a Runtime for HTML5?</h2>
+  <p>HTML5, JS, CSS and associated APIs, called the Open Web Platform by W3C, and colloquially referred to as HTML5, is displacing older versions of the standard. The plug-ins used to enhance the browsers that implement older versions are also being displaced by new HTML5 features that are built in. The web has matured, with a clear separation of content, presentation and logic. HTML5 is making the web adaptable to more and more problem domains, and to an increasing variety of device types and screen sizes.</p>
+
+  <p>The evolution of the application model for invoking capabilities on a device vs. the browser model has led to attempts to extend browsers to do more for applications. But there are limits to what a browser can be allowed to do. A single browser application used across multiple sites must have restricted access to certain kinds of platform features to protect consumer privacy and platform security.</p>
+
+  <p>HTML5 applications are different from HTML5 web sites. HTML5 applications want to be invoked from the host O.S., not the browser. They don't go from site to site. So an application can be allowed, with the consumer's permission, to access features and data a browser cannot. For more on differences between sites and apps, see this.</p>
+
+  <p>The purpose of an application runtime for HTML5 is to provide the core HTML5/JS/CSS processing that an application needs along with platform access not available to browsers. With an application runtime, developers can provide a native-like experience using web technologies.</p>
+
+  <h3>How Applications Meet a Runtime</h3>
+  <p>There are three ways that an application can be executed on a runtime. A platform owner can choose to include a managed runtime with the platform shared among all applications. Applications are relatively small in this model and the runtime is managed by the platform owner, with updates and permissions integrated with the host OS. In the embedded case, the runtime can be linked and packaged into the application's executable. The application is larger, but the runtime only gets updated if the application is updated. Finally, a managed runtime can be installed after-the-fact by the first application that needs it, shared by subsequent applications. In this bootstrapped model, an developer with a suite of applications can have the benefit of a shared, managed runtime without having to have access to the platform when manufactured.</p>
+
+  <h3>Why Cameo</h3>
+  <p>All three of these runtime models have been implemented in the industry. But there has been no single open source project that supports all three of these models, across multiple operating systems. That's why we are developing Cameo.</p>
+</div>

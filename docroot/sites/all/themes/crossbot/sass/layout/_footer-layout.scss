@@ -1,0 +1,14 @@
+#block-menu-menu-footer-menu{
+	 @include container;
+}
+
+
+#block-boxes-legal-text{
+  @include container;
+  .content {
+    @include respond-to($medium) {
+  	  @include span-columns(6);
+      @include squish(3,3);
+    }
+  }
+}

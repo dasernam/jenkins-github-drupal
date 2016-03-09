@@ -1,0 +1,16 @@
+.node-type-blog {
+	.node-blog{
+    margin-bottom: $block-offset;
+		h2 {
+      margin-top: 0;
+		}
+		.submitted{
+      @extend %meta-copy;
+		}
+	}
+	.user-picture img{
+		@extend %avatar-image;
+		max-width: 140px;
+	}
+}
+

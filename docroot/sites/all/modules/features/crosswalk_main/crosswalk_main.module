@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Crosswalk Main feature.
+ */
+
+include_once 'crosswalk_main.features.inc';

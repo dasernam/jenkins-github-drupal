@@ -1,0 +1,19 @@
+diff --git a/docroot/sites/all/modules/contrib/markdown/markdown.php b/docroot/sites/all/modules/contrib/markdown/markdown.php
+index f548fc2..a82f57f 100755
+--- a/docroot/sites/all/modules/contrib/markdown/markdown.php
++++ b/docroot/sites/all/modules/contrib/markdown/markdown.php
+@@ -2375,6 +2375,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
+ 		$head		= $this->parseSpan($head);
+ 		$headers	= preg_split('/ *[|] */', $head);
+ 		$col_count	= count($headers);
++    $attr       = array_pad($attr, $col_count, '');
+ 		
+ 		# Write column headers.
+ 		$text = "<table>\n";
+@@ -2929,4 +2930,4 @@ negligence or otherwise) arising in any way out of the use of this
+ software, even if advised of the possibility of such damage.
+ 
+ */
+-?>
+\ No newline at end of file
++?>

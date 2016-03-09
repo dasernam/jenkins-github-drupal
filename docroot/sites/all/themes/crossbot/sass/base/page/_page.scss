@@ -1,0 +1,30 @@
+.page{
+  background:white;
+  &.not-front {
+    margin-top: $block-offset + $top-offset;
+  }
+}
+.page-header {
+
+}
+.main {
+
+}
+.main-content {
+
+}
+.page .sidebar-first {
+  h2 {
+    @extend %sidebar-title;
+  }
+
+}
+.sidebar-second {
+
+}
+.page-footer{
+  background: $black;
+}
+
+
+

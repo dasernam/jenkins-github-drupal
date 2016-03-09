@@ -1,0 +1,43 @@
+<!-- @include ../../components/content-page/content-page-top -->
+
+<div class="markdown-body">
+  <p>There are two ways that an application can be executed on a Crosswalk runtime. A platform owner can choose to include a Crosswalk <strong>managed</strong> runtime with the platform shared among all applications. Applications are relatively small in this model and the runtime is managed by the platform owner, with updates and permissions integrated with the host OS. In the second, <strong>embedded</strong> case, a Crosswalk runtime can be linked and packaged into the application's executable. The application is larger, but the runtime only gets updated if the application is updated.</p>
+
+  <p>Crosswalk is designed to provide a consistent HTML5 implementation across multiple OS's and distribution models.  </p>
+
+  <table>
+    <thead><tr>
+      <th></th>
+      <th>Linux</th>
+      <th>Android</th>
+      <th>Windows</th>
+      <th>Mac</th>
+    </tr></thead>
+    <tbody>
+    <tr>
+      <td>Managed</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Embedded</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table><p>Which Linux?  We're going to use Tizen PC as our default Linux distribution.  But others should work equally well.</p>
+
+  <p>When we say "Windows", we mean Windows 7 and Windows 8 Desktop environments.  Windows 8 "Modern" does not provide access to APIs needed to run applications that are not using its built-in runtime.</p>
+
+  <p>The easiest Android versions to support are the later ones.  But we are going to try to get Crosswalk to work on Gingerbread.  We know that the lack of HW acceleration will make things like WebGL useless, but we do think we can improve on the built-in Android web view on Gingerbread.</p>
+
+  <p>The latest Mac OS will generally be targeted.  iOS doesn't allow alternative runtimes, HTML5 or otherwise.</p>
+
+  <p>Generally, the project's priorities are from left to right.  </p>
+</div>
+
+<!-- @include ../../components/content-page/content-page-bottom -->

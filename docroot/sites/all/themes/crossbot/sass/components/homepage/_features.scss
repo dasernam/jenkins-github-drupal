@@ -1,0 +1,52 @@
+.what-is-crosswalk{
+  margin-bottom: 0;
+  h2{
+    @extend %section-title;
+  }
+  .feature-blocks {
+     position: relative;
+     @include container;
+  }
+  .feature-block{
+    padding-bottom: 3em;
+    @include respond-to(700px, max-width){
+      border-bottom: 3px solid $lightest-grey;
+    }
+    &:first-child:before {
+      @include respond-to(700px){
+        content: "";
+        height: 3px;
+        @include background-image(linear-gradient(left,  $lightest-grey 0%,$lightest-grey 32%,#ffffff 32%,#ffffff 34%,$lightest-grey 34%,$lightest-grey 66%,#ffffff 66%,#ffffff 68%,$lightest-grey 68%,$lightest-grey 100%));
+        bottom: 0;
+        position: absolute;
+        left: $grid-padding;
+        right: $grid-padding;
+      }
+    }
+    padding-top: 3em;
+    padding-bottom: 3em;
+   // border-bottom: 3px solid $lightest-grey;
+    img{
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 1em;
+      max-width:120px;
+    }
+    h3{
+      text-align: center;
+      @extend %feature-title;
+    }
+    p {
+      text-align: center;
+      @extend %feature-copy;
+    }
+    .promo-link {
+      text-align: center;
+      a {
+        @include button($orange);
+      }
+    }
+  }
+}
+
+

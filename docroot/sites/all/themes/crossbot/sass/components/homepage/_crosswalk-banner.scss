@@ -1,0 +1,40 @@
+#block-boxes-crosswalk-banner {
+  @include clearfix();
+  padding-top: $block-offset + pem(38); //offset plus navigation height
+  padding-bottom: $block-offset /2 ;
+  background: $orange url("../images/fractal-bg-orange.jpg") repeat;
+  border-bottom: 4px solid $dark-orange;
+  text-align: center;
+  @include respond-to($medium){
+    padding-bottom: $block-offset;
+    padding-top: $block-offset + 1em + pem(38);
+    background: url("../images/banner-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: top right;
+    text-align: left;
+    border-bottom-color: $orange;
+  }
+  .embed-container { // video embed
+    @extend %responsive-container;
+    border: solid 5px white;
+    box-shadow: 0px 0px 50px rgba(0,0,0, .4);
+    margin-bottom: 2em;
+    @include respond-to($medium) {
+      border: solid 15px rgba(255,255,255, .37);
+      margin-bottom: 0;
+    }
+  }
+  h2 {
+    @extend %banner-title;
+    text-shadow: $textshadow;
+  }
+  p {
+    @extend %banner-copy;
+    text-shadow: $textshadow;
+  }
+  .fork-cta a{
+    @include button($white);
+    margin-right: .5em;
+    margin-bottom: .5em;
+  }
+}

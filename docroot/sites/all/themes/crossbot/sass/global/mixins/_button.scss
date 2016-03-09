@@ -1,0 +1,21 @@
+@mixin button($color, $size:18) {
+  font-family: $clearsans;
+  border: 2px solid $color;
+  font-size: pem($size);
+  padding: .5em 1.5em;
+  display: inline-block;
+  background: none;
+  @include border-radius(2em);
+  color: $color;
+  line-height: 1.2;
+  &:hover{
+    background: $color;
+    @if $color == $white {
+      color: $orange;
+    }
+    @else {
+      color: $white;
+    }
+  }
+}
+

@@ -1,0 +1,22 @@
+//Home Page Features Blocks
+.what-is-crosswalk{
+  .feature-blocks {
+    @include container;
+  }
+
+  .feature-block{
+    @include span-columns(12 omega, 12);
+    @include respond-to(700px) {
+      padding-right: 1%;
+      padding-left: 1%;
+      @include span-columns(4, 12);
+      @include nth-omega(3n);
+    }
+  }
+
+  .feature-cta{
+    @include span-columns(12 omega, 12);
+    @include clearfix;
+  }
+}
+

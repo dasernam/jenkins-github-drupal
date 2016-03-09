@@ -1,0 +1,20 @@
+%banner-copy {
+  font-size: pem(20);
+  color: $white;
+  font-family: $clearsans;
+  font-weight: normal;
+  line-height: pem(22);
+  padding-bottom: .5em;
+}
+
+%feature-copy {
+  color: $medium-grey;
+  font-family: $serif;
+}
+
+%meta-copy {
+  color: $light-grey;
+  font-family: $serif;
+  font-size: pem(12);
+  line-height: 1.3;
+}

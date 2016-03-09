@@ -1,0 +1,19 @@
+<!-- @include ../../components/content-page/content-page-top -->
+
+<div class="markdown-body">
+<p>HTML5 applications are different from HTML5 web sites. HTML5 applications want to be invoked from the host OS, not the browser. They don't go from site to site. So an application can be allowed, with the consumer's permission, to access features and data a browser cannot. </p>
+
+<p>The Crosswalk Project provides the core HTML5/JS/CSS processing that an application needs along with platform access not available to browsers. With Crosswalk, developers can provide a native-like experience using web technologies.</p>
+
+<p>There are two different runtime/security models for web pages in web browsers vs. standalone apps executing on a runtime.  Apps on a runtime can generally use APIs designed for web pages, but not the reverse.</p>
+
+<p>Browsers cannot trust the content they display, since browsers can go to any page on the web.  Browsers can also be used to identify and track users through capability fingerprinting, following them as the go from web page to web page (e.g. knowing extension versions, codecs, fonts, screen size, it doesn’t take a lot more to identify a specific device).</p>
+
+<p>Separate installed apps (on a runtime) do not act as browsers and are more trusted by users. Since they aren’t used to surf the web don’t have the same fingerprinting issues.</p>
+
+<p>The consequence of that is if an API could cause the user serious harm if they accidentally say “yes” when they should have said “no”, the API is not allowed in a browser.   Due to fingerprinting, browser APIs are written to reveal as little device information as possible.  So instead of getting lists of all capabilities available, the web page asks for use of particular capabilities and it gets a successful response or not.</p>
+
+<p>That leaves a lot of things a native app can do that a web page can’t.   The <a href="http://www.w3.org/2012/sysapps/">W3C SysApps Working Group</a> is intended for those APIs that (at least at present) browsers won’t do. Crosswalk will support these APIs.</p>
+    </div>
+
+<!-- @include ../../components/content-page/content-page-bottom -->

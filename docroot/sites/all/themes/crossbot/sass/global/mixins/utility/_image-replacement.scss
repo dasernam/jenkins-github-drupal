@@ -1,0 +1,9 @@
+@mixin image-replacement($img, $height, $width) {
+  height: $height;
+  width: $width;
+  text-indent: 150%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url("../images/#{$img}");
+  background-repeat: no-repeat;
+}

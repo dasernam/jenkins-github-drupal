@@ -1,0 +1,15 @@
+#block-views-blog-listing-block {
+  @extend %sidebar-box;
+  .blog-entry{
+   line-height: 1.3em;
+   @extend %bottom-border-short;
+    a {
+      font-family: $clearsans;
+    }
+    .date {
+      margin-top: .4em;
+      @extend %meta-copy;
+    }
+  }
+}
+

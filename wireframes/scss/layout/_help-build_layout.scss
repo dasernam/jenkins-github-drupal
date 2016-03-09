@@ -1,0 +1,47 @@
+.main-content{
+	.help-build &{
+		padding-top: 3em;
+	}
+}
+
+.help-build-block{
+	@include clearfix;
+	margin-bottom: 5em;
+	.support-image {
+		text-align: center;
+		img {
+			border-radius: 50%
+		}
+		@include span-columns(12);
+  		@include respond-to($small) {
+        @include span-columns(3, 12);}
+        .even &{
+        	@include respond-to($small) {
+	        @include span-columns(3 omega, 12);
+	 		}
+        }
+
+	 }
+	 .help-build-text {
+	 	padding-left: $gutter-width;
+		@include span-columns(12);
+  		@include respond-to($small) {
+        @include span-columns(9 omega, 12);
+        .even &{
+        	@include respond-to($small) {
+	        @include span-columns(9, 12);
+	 		}
+        }
+ 		}
+	 }
+}
+
+.help-build {
+	.button{
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 2em
+	}
+}
+
+

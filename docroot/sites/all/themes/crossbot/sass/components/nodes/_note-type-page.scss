@@ -1,0 +1,8 @@
+.node-type-page {
+  #block-crosswalk-crosswalk-wide-page-title {
+    @extend %page-title;
+  }
+  .node-page {
+    margin-bottom: $block-offset;
+  }
+}

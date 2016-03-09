@@ -1,0 +1,23 @@
+.recent-blog-entries { // homepage blog layout
+  .view-content {
+    @include container;
+  }
+  .blog-entry {
+    @include span-columns(12 omega, 12);
+    @include respond-to($medium) {
+      @include span-columns(6, 12);
+      @include nth-omega(2n);
+    }
+  }
+  .avatar-image {
+    @include span-columns(2, 8);
+  }
+  h3, .date {
+    @include span-columns(6 omega, 8);
+  }
+
+  .excerpt, .read-more {
+    clear: both;
+    @include span-columns(6 omega,6);
+  }
+}

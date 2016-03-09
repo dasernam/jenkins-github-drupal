@@ -1,0 +1,48 @@
+
+.recent-blog-entries {
+  @include clearfix;
+  background: url(../images/fractal-bg.jpg) left top repeat;
+   h2{
+      @extend %section-title;
+      background: white;
+   }
+  .blog-entry{
+    padding: 0 0 $block-offset 0;
+    &:first-child {
+      padding-top: $block-offset
+    }
+    @include respond-to($medium){
+      padding: $block-offset $gutter-width;
+    }
+    .avatar-image img{
+      @extend %avatar-image;
+    }
+    h3{
+      @extend %feature-title;
+      margin-top: 0;
+      a{
+        color: $dark-grey;
+        &:hover{
+        color: $orange;
+        }
+      }
+    }
+    .date {
+      font-size: pem(14);
+      color: #9d9c9c;
+    }
+    .excerpt{
+      @extend %feature-copy;
+    }
+    .read-more {
+      border-top: dotted 1px $dirty-white;
+      padding-top: .2em;
+      text-align: right;
+      font-family: $clearsans;
+      &:after {
+        content: "»";
+        padding-left: .3em;
+      }
+    }
+  }
+}

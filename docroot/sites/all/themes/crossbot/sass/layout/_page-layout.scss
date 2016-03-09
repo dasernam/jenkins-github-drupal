@@ -1,0 +1,66 @@
+//Region Layout
+
+.page {
+  @include clearfix;
+}
+
+.page-header {
+  @include span-columns(12);
+}
+
+#block-crosswalk-crosswalk-wide-page-title, #block-boxes-blog-listing-title{
+  .content {
+    @include container;
+    padding: 0 .2em;
+  }
+}
+
+.main {
+  .front & {
+    @include span-columns(12);
+    @include clearfix;
+  }
+  .not-front & {
+    @include container;
+  }
+}
+
+.main-content {
+  @include span-columns(12);
+  @include respond-to($medium) {
+    .not-front & {
+      @include span-columns(8);
+    }
+  }
+  //flip layout of content page//
+  .node-type-page & {
+    @include respond-to($medium) {
+      @include span-columns(9 omega, 12);
+    }
+  }
+}
+
+.main .sidebar-first {
+  @include span-columns(12);
+  @include respond-to($medium) {
+    @include span-columns(4 omega);
+  }
+  //flip layout of content page//
+  .node-type-page & {
+    @include respond-to($medium) {
+      @include span-columns(3);
+    }
+  }
+}
+
+// End .main
+
+.page-footer {
+  clear: both;
+  @include clearfix;
+}
+
+// End .page
+
+
+

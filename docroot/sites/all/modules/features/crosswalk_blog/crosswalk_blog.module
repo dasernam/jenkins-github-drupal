@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Crosswalk Blog feature.
+ */
+
+include_once 'crosswalk_blog.features.inc';

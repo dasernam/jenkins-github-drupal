@@ -1,0 +1,72 @@
+%banner-title { // title inside homepage
+  font-size: pem(36);
+  font-weight: normal;
+  color: $white;
+  letter-spacing: -2px;
+  margin: 0;
+  font-family: $clearsansbold;
+  line-height: 1;
+  @include respond-to($small) {
+    font-size: pem(48);
+  }
+  @include respond-to($large) {
+    font-size: pem(72);
+  }
+}
+
+%section-title { //with white arrow
+  color: $dark-grey;
+  font-size: pem(36);
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+  font-family: $clearsansbold;
+  font-weight: normal;
+  @include box-shadow(0 2px 2px rgba(0,0,0,.1));
+  @include bottom-arrow(20px, $white);
+  a {
+    color: $dark-grey;
+  }
+}
+
+
+%feature-title { // 3 features on homepage
+  font-size: pem(28);
+  color: $dark-grey;
+  line-height: 1.28;
+}
+
+%page-title {
+  background: $orange url("../images/fractal-bg-orange.jpg") repeat;
+  border-bottom: solid 6px $dark-orange;
+  margin-bottom: $block-offset / 2;
+  margin-top: ($block-offset + $top-offset) * -1;
+  padding-top:  $block-offset + $top-offset;
+  padding-bottom: $block-offset;
+  @include respond-to($medium){
+    padding-top:  $block-offset + $top-offset + 1em;
+    padding-bottom: $block-offset + 1em;
+  }
+  .content {
+    color: white;
+    font-size: pem(56);
+    text-shadow: $textshadow;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    font-family: $clearsansbold;
+    text-align: center;
+    @include respond-to($medium){
+      font-size: pem(64);
+    }
+  }
+}
+
+
+%sidebar-title { // applied to .sidebar-first h2 in base/body
+  color: $dark-grey;
+  font-size: pem(24);
+  margin: 0 0 .5em 0;
+  padding: 0;
+  font-family: $clearsansbold;
+  font-weight: normal;
+}

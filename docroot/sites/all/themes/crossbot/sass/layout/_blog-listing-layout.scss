@@ -1,0 +1,44 @@
+.page-blog .view-blog-listing {
+  h2 {
+    @include respond-to($small){
+      @include span-columns(10 omega,12);
+    }
+  }
+  .avatar-image img{
+    @include span-columns(2,8);
+    @include respond-to($small){
+      @include span-columns(2,12);
+    }
+  }
+  .blog-entry {
+    clear: both;
+    @include span-columns(12 omega, 12);
+  }
+
+  .date, .written-by {
+    @include respond-to($small){
+      @include span-columns(10 omega,12);
+    }
+  }
+  .written-by {
+    margin-bottom: 1em;
+      & + * {
+      @include respond-to($small){
+        clear: both;
+      }
+    }
+  }
+  p{
+    @include respond-to($small){
+      @include span-columns(10 omega,12);
+      padding-right: $gutter-width;
+    }
+  }
+  .read-more{
+    @include respond-to($small){
+      clear: both;
+      display: block;
+      @include span-columns(10 omega,12);
+    }
+  }
+}
