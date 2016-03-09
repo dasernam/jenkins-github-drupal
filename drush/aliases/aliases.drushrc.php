@@ -20,7 +20,3 @@ $aliases['cross-prb'] = array(
   'root' => '/Applications/MAMP/htdocs/cross-prb/docroot/new-pull-request',
 );
 
-// Allow local aliases. Create aliases.local.php in your aliases directory to
-// add your own.
-@include "aliases.local.php";
-
