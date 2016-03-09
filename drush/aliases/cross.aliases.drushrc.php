@@ -10,14 +10,14 @@
  * everyone can just overwrite the different settings.
  */
 
-$aliases['crosswalk-stage'] = array(
-  'uri' => 'stg.cameoruntime.org',
-  'root' => '/srv/www/stg.cameoruntime.org/docroot',
+$aliases['cross-stage'] = array(
+  'uri' => 'cross-stage',
+  'root' => '/Applications/MAMP/htdocs/cross-stage/docroot',
 );
 
-$aliases['crosswalk-prb'] = array(
-  'uri' => 'stg.cameoruntime.org',
-  'root' => '/srv/www/stg.cameoruntime.org/docroot/new-pull-request',
+$aliases['cross-prb'] = array(
+  'uri' => 'cross-prb',
+  'root' => '/Applications/MAMP/htdocs/cross-prb/docroot/new-pull-request',
 );
 
 // Allow local aliases. Create aliases.local.php in your aliases directory to
