@@ -73,5 +73,5 @@ as the following:
       'delete-variables' => array('googleanalytics_account'),
       'reset-variables' => array('site_mail' => 'local@local.com'),
     );
-
-Then you would only need to type _drush devify --yes_.
+Adding new comment
+#Then you would only need to type _drush devify --yes_.
