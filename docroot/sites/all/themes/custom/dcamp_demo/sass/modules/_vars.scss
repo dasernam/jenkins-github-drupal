@@ -1,0 +1,157 @@
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: "IntelClear-Regular", "ClearSans-Regular", Helvetica, "Helvetica Neue", verdana, sans-serif;
+$base-font-size: 14px;
+$base-line-height: 1.4;
+
+$font-family-light: "IntelClear-Light", "ClearSans-Light", Helvetica, "Helvetica Neue", verdana, sans-serif;
+$font-family-bold: "IntelClear-Bold", "ClearSans-Bold", Helvetica, "Helvetica Neue", verdana, sans-serif;
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 85%;
+$fixed-line-height: $base-line-height;
+
+// Headings
+$header-font-family: $font-family-light;
+$h1-font-size: 40px;
+$h2-font-size: 33px;
+$h3-font-size: 25px;
+$h4-font-size: 20px;
+$h5-font-size: 18px;
+
+// Responsive
+$sm-mobile-min: 320px;
+$sm-mobile-max: 479px;
+$mobile-min: 480px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 991px;
+$desktop-min: 992px;
+$desktop-max: 1199px;
+$xl-desktop-min: 1200px;
+
+
+// Color Palette
+// l: +20% white for gradient
+// ll: +40% white for gradient
+
+// Light Blue
+$primary-color-1: #7DD2F7;
+$primary-color-1-l: #97DBF9;
+$primary-color-1-ll: #B1E4FA;
+
+// Intel Blue
+$primary-color-2: #0070C5;
+$primary-color-2-l: #338DD1;
+$primary-color-2-ll: #66A9DC;
+
+// Yellow
+$accent-color-1: #FFDA00;
+$accent-color-1-l: #FFE133;
+$accent-color-1-ll: #FFE966;
+
+// Canary Yellow
+$accent-color-2: #FDB814;
+$accent-color-2-l: #FDC643;
+$accent-color-2-ll: #FED472;
+
+// Blue 
+$accent-color-3: #00AEFF;
+$accent-color-3-l: #33BEF2;
+$accent-color-3-ll: #66CEF5;
+
+// Purple 
+$accent-color-4: #7929D2;
+$accent-color-4-l: #9454DB;
+$accent-color-4-ll: #AF7FE4;
+
+// Green
+$accent-color-5: #39CD89;
+$accent-color-5-l: #61D7A1;
+$accent-color-5-ll: #88E1B8;
+
+// Grayscale
+// White
+$lightgray: #F0F2F4;
+$lightgray-l: #F6F7F8;
+$lightgray-ll: #FFF;
+
+// Gray
+$gray: rgb(145, 145, 150);
+$gray-l: rgb(175, 178, 181);
+$gray-ll: rgb(209, 211, 213);
+
+// Dark Gray
+$darkgray: rgb(45, 50, 55);
+$darkgray-l: rgb(76, 81, 85);
+$darkgray-ll: rgb(108, 112, 116);
+
+// Social media icon colors
+$youtube_color: #cd201f;
+$twitter_color: #55acee;
+$github_color: #4183c4;
+
+// Text
+$txt-header-color: #000;
+$txt-color: #2d3237;
+
+// Subheader 
+$subheader-txt-color: #AFB2B6;
+
+// Links
+$link-txt-color: $accent-color-3;
+$link-hover-txt-color: $accent-color-4;
+
+// Header
+$header-top-background-color: #1c1c1c;
+$header-background-color: #252525;
+$header-txt-color: #fff;
+$header-txt-size: 12px;
+$menu-hover-underline-color: #FDB814;
+
+// Footer 
+$footer-background-color: $darkgray;
+$footer-txt-color: #fff;
+
+// Sidebar
+$sidebar-parent-background: #D1D3D5;
+$sidebar-parent-hover-txt-color: #fff;
+$sidebar-parent-hover-background: #00AEFF;
+$sidebar-parent-container-background: #F0F2F4;
+
+// Default Buttons
+$btn-txt-color: #fff;
+$btn-color: $accent-color-4;
+$btn-border-color: $btn-color;
+
+// Default Buttons hover
+$btn-hover-txt-color: $accent-color-4;
+$btn-hover-color: transparent;
+$btn-hover-border-color: $btn-hover-txt-color;
+
+// Inputs
+$input-border-color: #D1D3D5;
+
+// Banner
+$banner-right-color: #90dbf7;
+
+// Breadcrumb 
+$breadcrumb-txt-size: 13px;
+$breadcrumb-txt-color: #D1D3D5;
+$breadcrumb-current-txt-color: #66CEF5;
+
+// Search
+$search-header-txt-color: #AFB2B6;
+
+// Tables
+$table-border-color: #D1D3D5;
+$table-hover-row-background: #F0F2F4;
+
+// Header
+$collapsed-header-size: 60px;
+$expanded-header-size: 80px;

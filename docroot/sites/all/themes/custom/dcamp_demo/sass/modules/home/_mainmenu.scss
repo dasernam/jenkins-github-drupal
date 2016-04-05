@@ -1,0 +1,219 @@
+$text_color: #afb2b6;
+$text_hover_color: #7929D2;
+
+// slide-in menu
+
+#search .fa-search:hover {
+  color: $text_hover_color;
+}
+
+/**
+ * menu goes above everything else
+ * nb balloon image is index 2
+ **/
+#header {
+  z-index: 3;
+}
+
+.element-invisible {
+  display: none;
+}
+
+/**
+ * slide-in drawer
+ **/
+
+// drawer not displayed by default
+#c-menu--slide-left {
+  @include box-shadow(2px 2px 5px 0 rgba(50, 50, 50, 0.4));
+  display: none;
+}
+
+#block-system-main-menu ul {
+  display: none;
+}
+
+.header-logo {
+  position: relative;
+  z-index: 1; /* on top of hamburger */
+  left: 38%;
+  margin-bottom: 5px;
+
+  @include respond-to('desktop') {
+    left: 0;
+  }
+}
+
+#c-menu--slide-left {
+  z-index: 2; /* on top of logo */
+
+  &.is-active {
+    display: block;
+  }
+}
+
+#block-system-main-menu h4 {
+  display: inline-block;
+  font-size: 0;
+  min-width: 28px;
+  min-height: 20px;
+}
+
+.mobile-ham-menu {
+  cursor: pointer;
+  display: block;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  top: 8px;
+  left: 0;
+
+  @include respond-to('desktop') {
+    display: none;
+  }
+}
+
+.mobile-ham-menu::before {
+  @include box-shadow(0 0.5em 0 0 $accent-color-4, 0 1.0em 0 0 $accent-color-4);
+  background: $accent-color-4;
+}
+
+.mobile-ham-menu::before {
+  @include box-shadow(0 0.5em 0 0 $darkgray-l, 0 1.0em 0 0 $darkgray-l);
+  content: ' ';
+  position: absolute;
+  left: 6px;
+  top: -moz-calc(50% - 0.5em); // 0.5em is the first box-shadow
+  top: -webkit-calc(50% - 0.5em); // 0.5em is the first box-shadow
+  top: calc(50% - 0.5em); // 0.5em is the first box-shadow
+  width: 2em;
+  height: 0.25em;
+  background: $darkgray-l;
+  z-index: 0;
+
+  @include respond-to('desktop') {
+    @include box-shadow(none);
+    background-color: transparent;
+  }
+}
+
+.c-menu__close {
+  @include box-shadow(none);
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: none;
+  -webkit-appearance: none;
+}
+
+.c-menu__close:focus {
+  outline: 0;   
+}
+
+.c-menu {
+  @include transition-custom(transform, 0.3s);
+  z-index: 200;
+  background-color: $accent-color-4;
+  position: fixed;
+}
+
+.c-menu__items {
+  list-style: none;
+  margin: 50px 0 0 0;
+  padding: 0;
+}
+
+.c-menu--slide-left {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.c-menu--slide-left .c-menu__item {
+  @include transition-custom(border-color);
+  display: block;
+  text-align: center;
+  border-bottom: solid 2px rgba($accent-color-4-l, 0.2);
+}
+
+.c-menu--slide-left .c-menu__item:hover {
+  border-bottom-color: $accent-color-3;
+}
+
+.c-menu--slide-left .c-menu__link {
+  display: block;
+  padding: 12px 24px;
+  color: $gray-ll;
+
+  &:hover,
+  &.active {
+      color: #fff;
+  }
+}
+
+.c-menu--slide-left .c-menu__close {
+  display: block;
+  padding: 12px 20px;
+  float: right;
+  font-size: 25px;
+  color: $lightgray;
+
+  &:hover {
+      color: #fff;
+  }
+}
+
+.c-menu--slide-left {
+  @include translateX(-100%);
+  top: 0;
+  left: 0;
+}
+
+.c-menu--slide-left.is-active {
+  @include translateX(0);
+}
+
+.c-menu__close {
+    color: #fff;
+    background-color: $accent-color-4;
+    border: none;
+    cursor: pointer
+}
+
+.c-menu--slide-left {
+  @include translateX(-1000px);
+}
+
+@include respond-to('desktop') {
+  #header #main-menu #c-menu--slide-left {
+    display: none;
+  }
+
+  #block-system-main-menu ul {
+    display: block;
+  }
+}
+
+// Logged in validations
+.logged-in {
+  #c-menu--slide-left {
+    top: 35px;
+  }
+
+  @media screen and (min-width: 805px) {
+    &.navbar-tray-open {
+      #c-menu--slide-left {
+        top: 115px;
+      }
+    }
+  }
+}
+
+.front {
+  header #main-menu ul.menu li a.active {
+    color: $gray !important;
+
+    &:hover {
+      color: $accent-color-4 !important;
+    }
+  }
+}

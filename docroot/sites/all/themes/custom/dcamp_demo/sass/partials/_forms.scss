@@ -1,0 +1,20 @@
+input,
+textarea {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+.form-text {
+  padding: 5px;
+}
+
+.form-actions {
+  input[type=submit],
+  input[type=reset],
+  input[type=button],
+  button {
+    @extend .button-large;
+    display: inline-block;
+    margin-right: 1em;
+  }
+}

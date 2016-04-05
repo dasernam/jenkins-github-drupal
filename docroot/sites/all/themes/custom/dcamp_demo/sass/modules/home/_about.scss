@@ -1,0 +1,269 @@
+$mountain_overlap: 100px;
+$social_media_size: 20px;
+
+@media (max-device-width:767px) {
+  #about .quicktabs-tabpage {
+    margin-top: 50px;
+  }
+
+  #about .quicktabs-tabpage.quicktabs-hide {
+    display: block;
+  }
+}
+
+#about {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+  background: #722dd1; /* Old browsers */
+  background: -moz-linear-gradient(-12deg, #722dd1 19%, $accent-color-4-ll 81%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-12deg,#722dd1 19%, $accent-color-4-ll 81%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(-12deg, #722dd1 19%, $accent-color-4-ll 81%); /*IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#722dd1', endColorstr='#af7fe4',GradientType=0 ); /* IE6-9 */
+  margin-top: 0;
+  padding-top: 0;
+  z-index: 1;
+}
+
+#about:after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* seems to be 1 pixel gap for some reason */
+  border-style: solid;
+  border-width: $gradient_overlap_small 0 0 100vw;
+  border-color: transparent transparent transparent #fff;
+  box-sizing: border-box;
+}
+
+#about .menu-block-wrapper .menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-device-width:767px) {
+  #about .menu-block-wrapper > .menu {
+    padding-right: $margin_size_portrait;
+    padding-left: $margin_size_portrait;
+  }
+}
+
+#about h1,
+#about .section-about-subtitle {
+  color: #fff;
+}
+
+#about .pane-title {
+  margin-bottom: 1.5em;
+}
+
+#about .section-about-description,
+#about .feature-item {
+  @include font-light;
+  color: #fff;
+}
+
+#about .feature-item {
+  @extend %col-2;
+}
+
+@media screen and (max-width: $tablet-max) {
+  #about .feature-item {
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+#about .feature-item-details {
+  margin-top: 1em;
+  text-align: justify;
+}
+
+#about .feature-item .feature-item-title {
+  font-family: IntelClear-Regular;
+  font-size: $h3-font-size;
+  color: #fff;
+  padding-bottom: 5px;
+  border-bottom: solid 3px $accent-color-3;
+}
+
+@media (max-device-width:767px) {
+  #about .feature-item.feature-item-collapse {
+    display: none;
+  }
+
+  #about .view-content > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: solid 1px cyan;
+    padding-bottom: 10px;
+
+    margin-bottom: 30px;
+  }
+
+  #about .feature-item-arrow {
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+    border-width: 5px;
+    border-right-width: 0;
+    border-left-color: cyan;
+
+    margin-right: 5px;
+
+    color: transparent;
+
+    transform: rotate(90deg);
+
+    transition: transform 0.5s;
+  }
+
+  #about .feature-item-arrow.feature-item-collapse {
+    border-left-color: white;
+    transform: rotate(0deg);
+  }
+}
+
+#quicktabs-features {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-device-width:767px) {
+  #quicktabs-features {
+    flex-direction: column;
+  }
+}
+
+#quicktabs-features .item-list {
+  list-style-type: none;
+  padding: 0;
+  margin-right: 5%;
+
+  width: 30%;
+}
+
+@media (max-device-width:767px) {
+  #quicktabs-features .item-list {
+    width: auto;
+    margin-right: 0;
+    display: none;
+  }
+}
+
+#quicktabs-features .item-list ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+
+  list-style-type: none;
+}
+
+#quicktabs-features .item-list li {
+  padding: 0;
+  padding-bottom: 5px;
+  margin: 0;
+  margin-bottom: 40px;
+
+  border-bottom: solid 2px transparent;
+}
+
+@media (max-device-width:767px) {
+  #quicktabs-features .item-list li {
+    margin-bottom: 0;
+  }
+}
+
+#quicktabs-features .item-list li.active {
+  border-bottom-color: cyan;
+}
+
+#quicktabs-features .item-list li a {
+  font-family: IntelClear-Bold;
+  font-size: 16px;
+  color: white;
+}
+
+#quicktabs-container-features {
+  width: 100%;
+}
+
+@media (max-device-width:767px) {
+  #quicktabs-container-features {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#about .menu-block-wrapper > .menu {
+  margin: 0;
+  padding-top: 20px;
+}
+
+#about .menu-block-wrapper > .menu .social-media-item {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#about .menu-block-wrapper > .menu .social-media-item.first {
+  margin-left: 0;
+}
+
+#about .menu-block-wrapper > .menu .social-media-item.last {
+  margin-right: 0;
+}
+
+#about > .pane-quicktabs-features {
+  margin-bottom: 5%;
+}
+
+@media (max-device-width:767px) {
+  #about > .pane-quicktabs-features {
+    margin-bottom: 20%;
+  }
+}
+
+#about .menu-block-wrapper > .menu a {
+  @include transition-custom(all, 50ms, linear);
+  @include border-radius(20px);
+  display: block;
+  height: $social_media_size;
+  width: $social_media_size;
+  color: transparent;
+  padding: 10px;
+}
+
+#about .menu-block-wrapper > .menu a:hover {
+  @include background-opacity(#fff, 0.3);
+}
+
+#about .menu-block-wrapper > .menu a.twitter:before {
+  top: -3px;
+  left: 2px;
+}
+
+#about .menu-block-wrapper > .menu a.github:before {
+  top: -3px;
+  left: 0;
+}
+
+#about .menu-block-wrapper > .menu a:hover {
+  @include background-opacity(#fff, 0.3);
+}
+
+#about .menu-block-wrapper > .menu a:before {
+  position: relative;
+  top: 2px;
+  font-family: FontAwesome;
+  font-size: $social_media_size;
+  height: 100%;
+  width: 100%;
+}
+
+#about #quicktabs-features {
+  margin-top: 5em;
+}

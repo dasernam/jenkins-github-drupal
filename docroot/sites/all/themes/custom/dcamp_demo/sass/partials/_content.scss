@@ -1,0 +1,49 @@
+.not-front {
+  #content {
+    .field-submitted-by {
+      color: $gray;
+    }
+
+    .field-details {
+      @extend %clearfix;
+      margin-top: 2em;
+    }
+  }
+
+  .breadcrumb {
+    @extend %container;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  h1::after {
+    width: 100px;
+    height: 6px;
+    background-color: $accent-color-4-ll;
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+  }
+
+  ul.tabs {
+    border-bottom: 1px solid $gray-ll;
+    padding-bottom: 5px;
+    margin-bottom: 2em;
+
+    li {
+      display: inline-block;
+      padding: 0.5em 1em;
+
+      &:last-child {
+        border: none;
+      }
+
+      &.active a {
+        color: $link-hover-txt-color;
+      }
+    }
+  }
+}

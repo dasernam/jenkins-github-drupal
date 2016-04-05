@@ -1,0 +1,3 @@
+.button-large {
+  @include button($btn-hover-color, $btn-color, $btn-hover-txt-color, $btn-txt-color, $btn-hover-border-color, $btn-border-color);
+}

@@ -1,0 +1,126 @@
+.-expanded-submenu {
+  border-bottom-color: $gray-ll !important;
+  background-color: $lightgray;
+
+  @include respond-to('tablet') {
+    background-color: #FFF;
+  }
+
+  div.region-sidebar {
+    display: block;
+    height: auto;
+    transition: all;
+  }
+
+  span#secondary-menu-button {
+    display: block;
+    &::after {
+      @include font-awesome-icon('\f0D8' !important);
+      color: $gray;
+    }
+  }
+
+}
+
+.region-sidebar {
+  display: none;
+  height: 0px;
+  
+  @include respond-to('tablet') {
+    display: block;
+  }
+}
+
+.container-sidebar {
+  margin-bottom: 20px;
+  border-bottom: 1px solid $lightgray;
+  padding-bottom: 0.5em;
+
+  @include respond-to('tablet') {
+    border-bottom: 0;
+  }
+  
+  .affix {
+    position: initial;
+    
+    @include respond-to('tablet') {
+      position: fixed;
+    }
+  }
+
+  .affix-bottom {
+    position: relative;
+    
+    @include respond-to('tablet') {
+      position: absolute;
+    }
+  }
+
+  .stiky-container {
+    &:after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      background-color: #F0F2F4;
+    }
+  }
+
+  .sticky-container {
+    @include respond-to('tablet') {
+      width: 157.5px;
+    }
+    @include respond-to('desktop') {
+      width: 131.6px;
+    }
+    @include respond-to('xl-desktop') {
+      width: 165px;
+    }
+  } 
+
+  span#secondary-menu-button {
+    cursor: pointer;
+    font-size: 2em;
+    display: block;
+    margin-bottom: 20px;
+    
+    &::after {
+      @include font-awesome-icon('\f0D7');
+      font-size: 1em;
+      float: right;
+      color: $gray;
+    }
+    
+    @include respond-to('tablet') {
+      cursor: initial;
+      font-size: 1.5em;
+      
+      &::after {
+        content: none !important; 
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin-bottom: 10px;
+      
+      @include respond-to('tablet') {
+        font-size: 1em;
+      }
+      
+      a {
+        display: block;
+        color: $darkgray-l;
+        @include sidebar-link(3px, 14px, 10px);
+        @include sidebar-link-effect('active', $accent-color-4-ll, $accent-color-4);
+      }
+    }
+  }
+}

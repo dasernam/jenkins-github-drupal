@@ -1,0 +1,111 @@
+.page-documentation {
+  #main-content >  .container {
+    min-height: 100vh;
+  }
+  table {
+    width: 100%;
+  }
+
+  .container-sidebar .sticky-container {
+    @include respond-to('desktop') {
+      width: 212.5px;
+    }
+    @include respond-to('xl-desktop') {
+      width: 252.5px;
+    }
+  }
+  
+  .search-documentation {
+    font-size: 16px;
+    color: $darkgray;
+    width: 100%;
+    font-family: inherit;
+  }
+
+  .docs-menu {
+    li {
+      margin-bottom: 0;
+    }
+
+    a {
+      position: relative;
+      padding-top:5px;
+      padding-bottom: 5px;
+      border-left: 0;
+      &:hover {
+        border-left: 0;
+      }
+    }
+
+    .toctree-l1 {
+      & > a.reference.internal {
+        padding-left: 26px;
+        border-left: 0;
+        &::before {
+          position: absolute;
+          content: '\f105'; //Down array
+          font-family: FontAwesome;
+          left: 10px;
+        }
+      }
+    }
+
+    .toctree-l1.current {
+      border-top: 1px solid darken($lightgray-ll, 12%);
+      border-bottom: 1px solid darken($lightgray-ll, 12%);
+      
+      & > a.reference.internal{
+        border-bottom: 1px solid darken($lightgray-ll, 12%);
+        background: darken($lightgray-ll, 10%);
+        color: $accent-color-4;
+        font-weight: bold;
+        &::before {
+          position: absolute;
+          content: '\f107'; //Down array
+          font-family: FontAwesome;
+          left: 10px;
+        }
+      }
+
+      & > ul {
+        background: darken($lightgray-ll, 10%);
+      }
+    }
+
+    .toctree-l2 {
+      & > a {
+        padding-left: 34px;
+        border-left: 0;
+      }
+    }
+
+    .toctree-l2.current {
+      & > a.reference.internal {
+        color: $accent-color-4;
+        background: $lightgray-l;
+        padding-left: 42px;
+        font-weight: bold;
+        &::before {
+          position: absolute;
+          content: '\f107'; //Down array
+          font-family: FontAwesome;
+          left: 26px;
+        }
+      }
+    }
+
+    .toctree-l3 {
+      a {
+        margin-left: 29px;
+        padding-left: 21px;
+        border-left: 2px solid $accent-color-4;
+      }
+    }
+
+    .toctree-l3.current {      
+      & > a.current {
+        color: $accent-color-4;
+      }
+    }
+  }
+}

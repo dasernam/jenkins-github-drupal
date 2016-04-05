@@ -1,0 +1,83 @@
+.comment {
+  background-color: #fff;
+  border: 1px solid $lightgray;
+  margin-bottom: 2em;
+
+  header {
+    position: static;
+    margin-bottom: 0.5em;
+    width: auto;
+    padding: 1em;
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .field-comment-body {
+    padding: 1em;
+  }
+
+  .links {
+    padding: 1em;
+    margin-top: 0.5em;
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+
+      a:before {
+        @include transition-custom(color, 0.2s);
+        color: $link-txt-color;
+        position: relative;
+        margin-right: 5px;
+      }
+
+      a:hover {
+        &:before {
+          color: $link-hover-txt-color;
+        }
+      }
+    }
+
+    .comment-delete a:before {
+      @include font-awesome-icon('\f014');
+    }
+
+    .comment-edit a:before {
+      @include font-awesome-icon('\f040');
+    }
+
+    .comment-reply a:before {
+      @include font-awesome-icon('\f112');
+    }
+  }
+}
+
+#comments {
+  background-color: $lightgray-l;
+  box-sizing: border-box;
+  margin-top: 2em;
+  padding: 1em;
+
+  input[type=text] {
+    border: 1px solid $gray-ll;
+    width: calc(100% - 1em);
+  }
+
+  textarea {
+    border-color: $gray-ll;
+    width: calc(100% - 0.5em);
+  }
+
+  .title.comment-form {
+    margin-top: 1.5em;
+  }
+}
+
+.page-comment-reply {
+  #comment-form {
+    background-color: $lightgray-l;
+    padding: 1em;
+  }
+}

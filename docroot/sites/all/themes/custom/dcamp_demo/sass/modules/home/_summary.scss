@@ -1,0 +1,113 @@
+$logo_width: 300px;
+$logo_z_layer: 2;
+
+$mountain_height: 280px;
+
+$padding_main: 10%;
+
+/* page with mountains */
+#summary {
+  background-color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .col-right {
+    text-align: justify;
+  }
+
+  &.gradient-wrapper {
+    padding-top: 3em;
+    padding-bottom: 0;
+    .container {
+      z-index: 1;
+    }
+  }
+}
+
+#home-slider {
+  margin: 0 !important;
+  width: 100% !important;
+
+  @include respond-to('tablet') {
+    width: 500% !important;
+  }
+}
+
+#summary:after {
+  content: '';
+  background: url(../images/ostro_keyvisual-2.svg) left bottom no-repeat;
+  position: absolute;
+  bottom: -30px; /* push mountains under the top of the page below */
+  left: -3px; /* needed to hide left hand 'edge' of mountain */
+  height: $mountain_height; /* height of background-image */
+  width: 100%;
+  z-index: 0;
+}
+
+#more {
+  display: none;
+}
+
+#summary .menu {
+  margin-top: 3em;
+  list-style-type: none;
+  text-align: center;
+
+  @include respond-to('tablet') {
+    text-align: left;
+  }
+}
+
+#summary .menu > li {
+  display: inline-block;
+  line-height: 50px;
+
+  &.first {
+    margin-right: 15px;
+  }
+
+  &.last {
+    margin-left: 15px;
+  }
+}
+
+#summary .pane-menu-menu-highlighted-links {
+  @include respond-to('tablet') {
+    display: inline-block;
+  }
+}
+
+#summary .menu > .last.leaf {
+  //width: calc(180px - 8px); /* margin of .inside (8px) */
+}
+
+#summary .pane-page-slogan .pane-content {
+  @include font-light;
+  line-height: 22px;
+}
+
+#logo {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+
+  @include respond-to('tablet') {
+    position: absolute;
+    left: -moz-calc(25% - #{$logo_width} / 2);
+    left: -webkit-calc(25% - #{$logo_width} / 2);
+    left: calc(25% - #{$logo_width} / 2);
+    top: 12%;
+    width: $logo_width;
+    z-index: $logo_z_layer;
+  }
+}
+
+/* logo */
+#logo:before {
+  content: url("../images/logo_ostro_black.svg");
+}
+
+/* remove bogus logo */
+#logo > img {
+  display: none; /* not display: none because ::before needs some size */
+}

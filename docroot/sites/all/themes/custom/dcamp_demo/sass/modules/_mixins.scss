@@ -1,0 +1,151 @@
+@mixin respond-to ($breakpoint) {
+  @if $breakpoint == 'mobile' { // 480px <-> 767px xs
+    @media (min-width: $sm-mobile-min) and (max-width: $mobile-max) {
+      @content;
+    } 
+  } @else if $breakpoint == 'tablet' { // 768px <-> 991px sm
+    @media (min-width: $tablet-min) { 
+      @content;
+    }
+  } @else if $breakpoint == 'desktop' { // 992px <-> 1999px md
+    @media (min-width: $desktop-min) {
+      @content;
+    }
+  } @else if $breakpoint == 'xl-desktop' { // 1200 >= lg
+    @media (min-width: $xl-desktop-min) {
+      @content;
+    }
+  }
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin font-light($font: $font-family-light) {
+  font-family: $font;
+  font-size: $base-font-size + 2;
+}
+
+@mixin inline {
+  display: inline-block;
+  vertical-align: top;
+}
+// Links
+@mixin link($color, $hover, $hover-decoration: none, $decoration-default: none) {
+  color: $color;
+  cursor: pointer;
+  text-decoration: $decoration-default;
+
+  &:focus,
+  &:visited {
+    color: $color;
+    text-decoration: $decoration-default;
+
+    span {
+      color: $hover;
+    }
+  }
+
+  &:hover {
+    color: $hover;
+    cursor: pointer;
+    text-decoration: $hover-decoration;
+
+    span {
+      color: $hover;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin background-opacity($color, $opacity) {
+  background-color: $color;
+  background-color: rgba($color, $opacity);
+}
+
+@mixin background-radial-gradient() {
+  background: rgba(185,235,234,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(185,235,234,1) 0%, rgba(185,235,234,1) 9%, rgba(185,235,234,1) 58%, rgba(129,178,189,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(185,235,234,1)), color-stop(9%, rgba(185,235,234,1)), color-stop(58%, rgba(185,235,234,1)), color-stop(100%, rgba(129,178,189,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(185,235,234,1) 0%, rgba(185,235,234,1) 9%, rgba(185,235,234,1) 58%, rgba(129,178,189,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(185,235,234,1) 0%, rgba(185,235,234,1) 9%, rgba(185,235,234,1) 58%, rgba(129,178,189,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(185,235,234,1) 0%, rgba(185,235,234,1) 9%, rgba(185,235,234,1) 58%, rgba(129,178,189,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(185,235,234,1) 0%, rgba(185,235,234,1) 9%, rgba(185,235,234,1) 58%, rgba(129,178,189,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9ebea', endColorstr='#81b2bd', GradientType=1 );
+}
+@mixin background-linear-gradient($origin, $start-color, $end-color) {
+  background: $start-color;
+  background: -moz-linear-gradient($origin, $start-color 0%, $end-color 100%);
+  background: -webkit-linear-gradient($origin, $start-color 0%, $end-color 100%);
+  background: -o-linear-gradient($origin, $start-color 0%, $end-color 100%);
+  background: -ms-linear-gradient($origin, rgba(255,255,255,1) 0%, rgba(217,203,202,1) 100%);
+  background: linear-gradient($origin, $start-color 0%, $end-color 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color', GradientType=1 );
+}
+
+@mixin button ($bg-color, $bg-color-hover, $txt-color, $txt-color-hover, $border-color, $border-color-hover) {
+  @include transition-custom(all);
+  background-color: $bg-color;
+  border: 2px solid $border-color;
+  color: $txt-color; 
+  cursor: pointer;
+  padding: 1em 1.4em;
+  text-align: center;
+
+  &:hover {
+    background-color: $bg-color-hover;
+    border-color: $border-color-hover;
+    color: $txt-color-hover;
+  }
+}
+
+@mixin reset-btn-style {
+  background-color: inherit;
+  border: none;
+  padding: inherit;
+
+  &:hover {
+    background-color: inherit;
+    border: none;
+  }
+}
+
+@mixin font-awesome-icon($value) {
+  font-family: 'FontAwesome';
+  content: $value;
+}
+
+@mixin active-menu-link {
+  background: $darkgray;
+  height: calc(100% - 5px);
+  color: $gray-ll;
+}
+
+@mixin touch-effect($scale) {
+  transform: scale($scale);
+  transition: transform 0.1s;
+}
+
+@mixin sidebar-link($border-left-width, $font-size, $padding-left) {
+  border-left: $border-left-width solid;
+  border-left-color: transparent;
+  font-size: $font-size;
+  padding-left: $padding-left; 
+  transition: border-left-color 0.2s ease;
+}
+@mixin sidebar-link-effect($active-class, $border-color, $link-color) {
+  &:hover,&.#{$active-class} {
+    transition: border-left-color 0.2s ease;
+    border-left-color: $border-color;
+    color: $link-color;
+  } 
+}
+
+@mixin transition-custom($property, $time: 150ms, $timing: ease-in) {
+  @include transition-property($property);
+  @include transition-duration($time);
+  @include transition-timing-function($timing);
+}

@@ -1,0 +1,1 @@
+!function(a){"use strict";Drupal.behaviors.dcampDemo={attach:function(a,b){}}}(jQuery);

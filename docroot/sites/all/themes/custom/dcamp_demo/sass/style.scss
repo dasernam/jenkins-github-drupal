@@ -1,0 +1,30 @@
+/*
+// Main stylesheet containing layout, features and style overrides
+// ========================================================================== */
+
+@import 'config';
+
+// General styles
+@import 'modules/vars';
+@import 'modules/mixins';
+
+@import '../libraries/font-awesome/css/font-awesome.min.css';
+
+@import 'vendor/jquery.bxslider.css';
+
+@import 'partials/grid';
+@import 'partials/globals';
+@import 'partials/forms';
+@import 'partials/comments';
+@import 'partials/header';
+@import 'partials/buttons';
+@import 'partials/breadcrumb';
+@import 'partials/sidebar';
+@import 'partials/content';
+
+@import 'modules/blogs/base';
+
+@import 'modules/home/main';
+
+@import 'modules/docs/base';
+@import 'partials/downloads';

@@ -1,0 +1,110 @@
+#blogs {
+  background: #722dd1; /* Old browsers */
+  background: -moz-linear-gradient(-12deg, #722dd1 19%, $accent-color-4-ll 81%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-12deg,#722dd1 19%, $accent-color-4-ll 81%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(-12deg, #722dd1 19%, $accent-color-4-ll 81%); /*IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#722dd1', endColorstr='#af7fe4',GradientType=0 ); /* IE6-9 */
+
+  color: white;
+  z-index: 1;
+
+  /* straight bottom edge */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#blogs h1 {
+  color: #fff;
+  margin-bottom: 0.25em;
+  margin-top: 1.5em;
+}
+
+#blogs:before {
+  @include scaleY(-1);
+  content: '';
+  position: absolute;
+  top: 0;
+  border-style: solid;
+  border-width: $gradient_overlap 0 0 100vw;
+  border-color: transparent transparent transparent #fff;
+  box-sizing: border-box;
+}
+
+@media (max-device-width:767px) {
+  #blogs:before {
+    border-width: $gradient_overlap_small 0 0 100vw
+  }
+}
+
+#blogs .view-header {
+  font-size: $h4-font-size;
+  margin-bottom: 50px;
+}
+
+#blogs .view-content {
+  @include respond-to('tablet') {
+    display: flex;
+  }
+}
+
+@media (max-device-width:1096px) {
+  #blogs .view-content {
+    //flex-direction: column;
+  }
+}
+
+.blog-item {
+  @extend %col-3;
+
+  .blog-item-img img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+#blogs .blog-item > .blog-item-img {
+  margin-bottom: 4%;
+}
+
+#blogs .more-link {
+  display: flex;
+  justify-content: center;
+}
+
+#blogs .more-link > a {
+  border: solid white 1px;
+  font-size: $base-font-size + 2;
+
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+
+  text-align: center;
+
+  margin-bottom: 50px;
+  color: #fff;
+
+  &:hover {
+    color: $link-hover-txt-color;
+  }
+}
+
+#blogs .more-link > a:hover {
+  background-color: #fff;
+}
+
+#blogs .blog-item .blog-item-img {
+  margin-bottom: 0.5em;
+}
+
+.blog-item .blog-item-title a {
+  display: block;
+  font-family: IntelClear-Bold;
+  font-size: $base-font-size + 4;
+  margin-bottom: 1em;
+  color: #fff;
+
+  &:hover {
+    color: $link-txt-color;
+  }
+}

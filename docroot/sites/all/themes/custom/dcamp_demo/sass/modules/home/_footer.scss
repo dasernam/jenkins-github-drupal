@@ -1,0 +1,222 @@
+$social_media_size: 20px;
+
+#footer-wrapper > .section:nth-child(1) {
+  display: inline;
+}
+
+#footer-wrapper > .section:nth-child(1) > * {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#footer-wrapper .section:nth-child(1)::before {
+  content: url("../images/logo_ostro_project_white.svg");
+  display: block;
+  width: 25%;
+  padding-left: -webkit-calc(43% - 10%/2);
+  padding-left: -moz-calc(43% - 10%/2);
+  padding-left: calc(43% - 10%/2);
+  padding-right: -webkit-calc(50% - 10%/2);
+  padding-right: -moz-calc(50% - 10%/2);
+  padding-right: calc(50% - 10%/2);
+  padding-top: 4em;
+  padding-bottom: 2em;
+  margin-top: -5%;
+
+  @include respond-to('tablet') {
+    background-color: #212428;
+    padding-bottom: 4em;
+    padding-top: 8em;
+    padding-left: -webkit-calc(50% - 10%/2);
+    padding-left: -moz-calc(50% - 10%/2);
+    padding-left: calc(50% - 10%/2);
+    width: 10%;
+  }
+}
+
+#footer-columns {
+  > nav {
+    display: none;
+  }
+
+  @include respond-to('tablet') {
+    position: relative;
+    display: flex;
+    text-align: left;
+    background-color: #212428;
+    border-bottom: solid 70px #212428;
+
+    > .odd {
+      width: 25%;
+    }
+
+    > nav {
+      display: inline-block;
+    }
+  }
+}
+
+#block-menu-block-3 {
+  display: block !important;
+}
+
+#footer-columns .block-title {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  font-family: IntelClear-Bold;
+}
+
+#footer-columns .menu {
+  padding: 0;
+  list-style-type: none;
+}
+
+#footer-columns .menu li a {
+  line-height: 32px;
+  font-family: IntelClear-Light;
+  font-size: 14px;
+  color: #fff;
+
+  &.button-large {
+    @include reset-btn-style;
+    text-align: left;
+    color: #fff;
+  }
+}
+
+#footer .leaf > a:hover,
+#footer-columns .menu li:not(.social-media-item) a:hover {
+  color: $accent-color-3;
+}
+
+#footer .leaf > a:hover,
+#footer-columns .menu li:not(.social-media-item) a:hover {
+  color: $accent-color-3;
+}
+
+div#footer {
+  background-color: #15181B;
+  padding-top: 10px;
+  padding-bottom: 35px;
+
+  @include respond-to('tablet') {
+    padding-bottom: 10px;
+  }
+}
+
+/* h4:'Footer menu' - this doesn't appear in the mock-up */
+#footer .menu-footer-menu .block-title {
+  display: none;
+}
+
+#footer .menu-footer-menu .menu {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@include respond-to('tablet') {
+  #footer .menu-footer-menu .menu {
+    display: flex;
+    flex-direction: inherit;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+}
+
+#footer-wrapper > div:first-child {
+  font-size: 10px;
+  text-align: center;
+  @extend %container;
+}
+
+#footer-wrapper {
+  background-color: #15181B;
+}
+
+#footer-wrapper .section {
+  background-color: #212428;
+}
+
+#block-menu-block-3 {
+  bottom: 13px;
+  left: 70vw;
+  position: absolute;
+
+  @include respond-to('tablet') {
+    @include calc(bottom, -20px - $social_media_size);
+    @include calc(left, 10% + 80%*0.75);
+  }
+}
+
+#footer-wrapper .menu-block-3 > .menu {
+  display: flex;
+  margin: 0;
+}
+
+#footer-wrapper .menu-block-3 > .menu .social-media-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#footer-wrapper .menu-block-3 > .menu .social-media-item.first {
+  padding-left: 0;
+}
+
+#footer-wrapper .menu-block-3 > .menu .social-media-item.last {
+  padding-right: 0;
+}
+
+#footer-wrapper .menu-block-3 > .menu a {
+  display: block;
+  height: $social_media_size;
+  width: $social_media_size;
+  color: transparent;
+}
+
+#footer-wrapper .menu-block-3 > .menu a:before {
+  color: #6B6C6C;
+  font-family: FontAwesome;
+  font-size: 22px;
+  height: 100%;
+  width: 100%;
+}
+
+#footer-wrapper > div:last-child {
+  padding: 20px;
+  text-align: center;
+  font-size: 10px;
+
+  color: #65686C;
+  background-color: #101214;
+}
+
+#footer .leaf > a {
+  color: white;
+  font-size: 11px;
+  font-weight: normal;
+  display: block;
+  padding: 5px 0;
+  text-align: left;
+
+  @include respond-to('tablet') {
+    display: inline-block;
+    padding: 0;
+  }
+}
+
+#footer-wrapper .menu-block-3 > .menu {
+  .social-media-icon.youtube:hover:before {
+    color: $youtube_color;
+  }
+
+  .social-media-icon.twitter:hover:before {
+    color: $twitter_color;
+  }
+
+  .social-media-icon.github:hover:before {
+    color: $github_color;
+  }
+}

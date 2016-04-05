@@ -1,0 +1,9 @@
+{
+  "name": "dcamp-demo",
+  "version": "0.0.0",
+  "dependencies": {
+    "html5shiv": "~3.6.2",
+    "bootstrap-sass": "~3.0.2"
+  },
+  "devDependencies": {}
+}

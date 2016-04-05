@@ -1,0 +1,143 @@
+#documentation:before {
+  @include scaleY(-1);
+  content: '';
+  position: absolute;
+  top: 0;
+  border-style: solid;
+  border-width: $gradient_overlap 0 0 100vw;
+  border-color: transparent transparent transparent #fff;
+  box-sizing: border-box;
+}
+
+@media (max-device-width:767px) {
+  #documentation:before {
+    border-width: $gradient_overlap_small 0 0 100vw;
+  }
+}
+
+#documentation:after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* seems to be 1 pixel gap for some reason */
+  border-style: solid;
+  border-width: $gradient_overlap 0 0 100vw;
+  border-color: transparent transparent transparent #fff;
+  box-sizing: border-box;
+}
+
+@media (max-device-width:767px) {
+  #documentation:after {
+    border-width: $gradient_overlap_small 0 0 100vw;
+  }
+}
+
+#documentation {
+  background: #fff;
+}
+
+#documentation h1 {
+  text-align: center;
+}
+
+#documentation .menu-documentation-description {
+  margin-top: 5em;
+  margin-bottom: 5%;
+  width: 100%;
+  text-align: center;
+
+  .support-txt {
+    margin-top: 0;
+    text-align: justify;
+  }
+}
+
+#documentation .menu-documentation-description-item {
+  @extend .inline;
+  box-sizing: border-box;
+  text-align: justify;
+  padding: 1em;
+  margin: 0 1em;
+
+  .title {
+    display: block;
+    position: relative;
+    margin: 0 1.5em;
+    padding: 0.75em 0;
+    text-align: center;
+
+    &:hover {
+      color: $link-txt-color;
+    }
+
+    &::before {
+      @include scale3d(0, 1, 1);
+      @include transition-custom(transform 0.1s);
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: $link-txt-color;
+      //-webkit-transition: -webkit-transform 0.1s;
+      //transition: transform 0.1s;
+    }
+  }
+
+  @include respond-to('tablet') {
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+    padding: 1em;
+    margin: 0 1em;
+    max-width: 29.99%;
+  }
+
+  a {
+    &:hover{ 
+      .title::before {
+        @include scale3d(1, 1, 1);
+        @include transition-duration(0.3s);
+        @include transition-timing-function(cubic-bezier(0.4, 0, 0.2, 1));
+      }
+      .title {
+        color: $link-txt-color;
+      }
+    }
+  }
+}
+
+@media (max-device-width:767px) {
+  #documentation .menu-documentation-description-item {
+    margin-bottom: 25%;
+  }
+}
+
+#documentation .menu-documentation-description .title {
+  font-family: IntelClear-Bold;
+  text-align: center;
+  color: $accent-color-4;
+  font-size: 16px;
+}
+
+@media (max-device-width:767px) {
+  #documentation .menu-documentation-description .title {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+#documentation .menu-documentation-description-item .description {
+  @include font-light;
+  margin-top: 10px;
+  color: #2d3237;
+}
+
+#documentation .description {
+  line-height: 22px;
+}
+
+#documentation .description {
+  line-height: 22px;
+}

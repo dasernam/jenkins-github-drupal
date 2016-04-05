@@ -1,0 +1,23 @@
+.page-blogs {
+  .blog-item {
+    .blog-item-title a {
+      color: $link-txt-color;
+
+      &:hover {
+        color: $link-hover-txt-color;
+      }
+    }
+  }
+}
+
+.node-type-blog {
+  .field-image {
+    float: left;
+    margin-right: 1.5em;
+  }
+}
+
+.field-image,
+.blog-item-img {
+  overflow: hidden;
+}

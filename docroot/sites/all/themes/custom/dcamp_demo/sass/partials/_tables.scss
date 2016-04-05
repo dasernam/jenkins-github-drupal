@@ -1,0 +1,60 @@
+#content {
+  table {
+    max-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    
+    td,
+    th {
+      padding: 10px 15px;
+    }
+
+    th {
+      font-size: $h5-font-size;
+      background-color: $accent-color-3;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+
+      &.intel-blue {
+        background-color: $primary-color-2;
+      }
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    .odd {
+      background-color: $lightgray;
+    }
+
+    .even {
+      background-color: #fff;
+    }
+
+    a {
+      @include transition-custom(color, 150ms);
+      color: $accent-color-4;
+
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active,
+      &:link {
+        text-decoration: none;
+      }
+
+      &:hover,
+      &:active,
+      &.active
+      &:focus {
+        color: $link-txt-color;
+      }
+    }
+  }
+
+  .divider {
+    height: 45px;
+  }
+}

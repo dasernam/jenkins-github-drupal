@@ -1,0 +1,240 @@
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  overflow-x: hidden;
+  margin: 0;
+  position: relative;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  @include font-light;
+  color: $txt-header-color;
+  position: relative;
+  font-weight: normal;
+  margin-top: 0;
+  padding-top: 0;
+  line-height: initial;
+  a { 
+    color: $darkgray; 
+
+    &::hover {
+      color: $accent-color-4;
+    }
+  }
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+  margin-bottom: 30px;
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+h3, .h3 {
+  margin-top: 20px;
+  font-size: $h3-font-size;
+  margin-bottom: 15px;
+}
+
+h4, .h4 {
+  margin-top: 15px;
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  margin-top: 10px;
+  font-size: $h5-font-size;
+}
+
+pre {
+  @include border-radius(4px);
+  color: #333333;
+  display: block;
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 14px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+a {
+  @include transition-custom(color, 0.2s);
+  color: $link-txt-color;
+
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active,
+  &:link {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active,
+  &.active
+  &:focus {
+    color: $link-hover-txt-color;
+  }
+}
+
+.left,.-left {
+  float: left;
+}
+
+.right, .-right {
+  float: right;
+}
+
+.-align-left {
+  text-align: left;
+}
+.-align-center {
+  text-align: center;
+}
+.-align-right {
+  text-align: right;
+}
+
+.inline, .-inline {
+  @include inline;
+}
+
+a img {
+  @include transition-property(all);
+  @include transition-duration(500ms);
+  @include transition-timing-function(ease);
+
+  &:hover {
+    @include scale3d(1.06, 1.06, 1.06);
+  }
+}
+
+// Styles for lists {
+#content {
+  ul:not(.menu):not(.contextual-links):not(.tabs) {
+    margin: 10px 0 10px 30px;
+    li {
+      list-style-type: disc;
+      margin-bottom: 5px;
+    }
+  }
+
+  ol {
+    margin: 10px 0 10px 30px;
+    margin-left: 30px;
+    li {
+      list-style-type: decimal;
+      margin-bottom: 5px;
+    }
+  }
+
+  strong, b {
+    font-weight: bold;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+}
+
+.contextual-links li {
+  list-style-type: none !important;
+}
+
+// fix positions for anchors
+:target:before {
+  content:"";
+  display:block;
+  height: 75px; /* fixed header height*/
+  margin: -75px 0 0; /* negative fixed header height */
+}
+
+#main-wrapper {
+  padding-top: 60px;
+
+  @include respond-to('tablet') {
+    padding-bottom: 40px;
+  }
+}
+
+.not-front #main-wrapper {
+  padding-bottom: 100px;
+}
+
+mark {
+  @include border-radius(10px);
+  background-color: $accent-color-5-l;
+  color: transparent;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: 13px;
+  margin-left: 5px;
+}
+
+%container {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+
+  @include respond-to('tablet') {
+    width: 80%;
+  }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.container {
+  @extend %container;
+  @extend %clearfix;
+}
+
+.not-front {
+  #content {
+    @extend %container;
+    padding-top: 1em;
+  }
+}
+
+// 404 error
+.page-node-45 {
+  #page-title,
+  #breadcrumb {
+    display: none;
+  }
+}

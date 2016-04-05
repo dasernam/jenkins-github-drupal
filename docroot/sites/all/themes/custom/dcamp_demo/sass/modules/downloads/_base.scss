@@ -1,0 +1,52 @@
+.downloads-ostro {    
+  #content {
+    padding-top: 80px;
+    padding-bottom: 140px;
+  }
+
+  .fa-search {
+    background-image: url(../images/search2.png);
+    background-repeat: none;
+    background-size: cover;
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+
+  #search a {
+    display: block;
+    padding: 7px 15px !important;
+  }
+
+  #search a:hover .fa-search {
+    background-image: url(../images/search_hover.png);
+  }
+
+  #footer .social-media-icon.twitter {
+    background: url(../images/twitter.png);
+    background-size: cover;
+    width: 19px;
+    height: 15px;
+    display: inline-block;
+  }
+ 
+  #footer .social-media-icon {
+    cursor: pointer;
+  }
+ 
+  #footer .social-media-icon.twitter:hover {
+    background-image: url(../images/twitter_hover.png);
+  }
+  
+  #footer .social-media-icon.github {
+    background: url(../images/github.png);
+    background-size: cover;
+    width: 18px;
+    height: 15px;
+    display: inline-block;
+  }
+
+  #footer .social-media-icon.github:hover {
+    background-image: url(../images/github_hover.png);
+  }
+}
