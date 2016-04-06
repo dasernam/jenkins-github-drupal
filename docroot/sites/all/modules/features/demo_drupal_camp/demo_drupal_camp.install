@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * Drupal Installation file for this feature.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * To leave the hook_update available.
+ */
+function demo_drupal_camp_install() {
+  demo_drupal_camp_7001();
+}
+
+/**
+ * Implements hook_install().
+ *
+ * To disable ugly core modules.
+ */
+function demo_drupal_camp_7001() {
+  $modules_dis = array('overlay', 'toolbar');
+  $modules_en = array('libraries', 'navbar');
+  module_disable($modules_dis);
+  module_enable($modules_en);
+}
