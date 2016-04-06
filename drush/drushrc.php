@@ -54,9 +54,9 @@
 // More information on shell aliases can be found in 
 // `drush topic docs-shell-aliases`
 # $options['shell-aliases']['pull'] = '!git pull'; // We've all done it.
-# $options['shell-aliases']['pulldb'] = '!git pull && drush updatedb';
+$options['shell-aliases']['pulldb'] = '!git pull && drush --uri=http://cross-stage updatedb';
 # $options['shell-aliases']['noncore'] = 'pm-list --no-core';
-# $options['shell-aliases']['wipe'] = 'cache-clear all';
+$options['shell-aliases']['wipe'] = '--uri=http://cross-stage cache-clear all';
 # $options['shell-aliases']['unsuck'] = 'pm-disable -y overlay,dashboard';
 // Add a 'pm-clone' to simplify (cached) git cloning from drupal.org.
 # $options['shell-aliases']['pm-clone'] = 'pm-download --gitusername=YOURUSERNAME --package-handler=git_drupalorg --cache';
