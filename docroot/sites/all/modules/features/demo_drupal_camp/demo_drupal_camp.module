@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Demo Drupal Camp feature.
  */
+
+include_once 'demo_drupal_camp.features.inc';
