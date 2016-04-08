@@ -24,3 +24,8 @@ function demo_drupal_camp_7001() {
   module_disable($modules_dis);
   module_enable($modules_en);
 }
+
+function demo_drupal_camp_update_7002() {
+  $modules =array('contact');
+  module_enable($modules);
+}
