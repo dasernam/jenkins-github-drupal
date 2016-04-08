@@ -28,7 +28,7 @@ function demo_drupal_camp_7001() {
 /**
  * Implements hook_install().
  *
- * To enable contact module.
+ * To enable the contact module.
  */
 function demo_drupal_camp_update_7002() {
   $modules = array('contact');
