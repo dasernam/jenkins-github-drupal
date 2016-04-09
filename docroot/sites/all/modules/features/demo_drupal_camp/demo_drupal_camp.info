@@ -11,4 +11,5 @@ features[menu_custom][] = main-menu
 features[menu_links][] = main-menu_articles:articles
 features[menu_links][] = main-menu_home:<front>
 features[views_view][] = articles
+features[views_view][] = blogs
 features_exclude[dependencies][ctools] = ctools
