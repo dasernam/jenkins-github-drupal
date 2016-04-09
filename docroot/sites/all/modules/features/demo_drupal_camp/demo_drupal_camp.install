@@ -34,3 +34,13 @@ function demo_drupal_camp_update_7002() {
   $modules = array('contact');
   module_enable($modules);
 }
+
+/**
+ * Implements hook_install().
+ *
+ * To enable the blog module.
+ */
+function demo_drupal_camp_update_7003() {
+  $module = array('blog');
+  module_enable($module);
+}
